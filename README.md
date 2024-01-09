@@ -50,7 +50,7 @@ Let's connect! Reach out to me on social media:
 
 ## 📸 Screenshot
 
-![Home Page Slide Banner](https://drive.google.com/file/d/1dUdfYYr0OcE5lt5lIL2eKCmYgDxoDsh2/view?usp=sharing)
+![Home Page Slide Banner]((https://drive.google.com/uc?id=1dUdfYYr0OcE5lt5lIL2eKCmYgDxoDsh2))
 
 ## 🛠️ How to Install and Run the Project
 
