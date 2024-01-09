@@ -45,12 +45,35 @@ Feel free to use the comment section to provide feedback and suggestions for imp
 ## 📣 Connect with Me
 
 Let's connect! Reach out to me on social media:
-- Twitter: [@YourTwitterHandle](https://twitter.com/YourTwitterHandle)
-- LinkedIn: [YourLinkedInProfile](https://www.linkedin.com/in/YourLinkedInProfile)
+- Twitter: [@Ykaranbagal01234](https://twitter.com/karanbagal01234)
+- LinkedIn: [karanbagal01234](https://www.linkedin.com/in/karanbagal01234/)
 
-## 📸 Screenshot
+## 📸 Screenshots
 
-![Home Page Slide Banner](https://drive.google.com/uc?id=1dUdfYYr0OcE5lt5lIL2eKCmYgDxoDsh2)
+### Home Page Slide Banner
+![Slide](https://drive.google.com/uc?id=1_NOH6vRaUeNuXMoD2Xw_2RsyHIIFCkDA)
+
+### Admin Panel
+![Admin Panel](https://drive.google.com/uc?id=1OXwbDr3xhIpMo8lHLvzHE5Urf542pcmp)
+
+### Admin Panel 2
+![Admin Panel 2](https://drive.google.com/uc?id=19WTREsuMX-VS43lJmAaDCr41WTWjZK5e)
+
+### Anime Detail Page
+![Anime Detail](https://drive.google.com/uc?id=1w9ZE0B0d-3Ne3S5gxwmPAui7FC8zqJmL)
+
+### Feedback / Comments
+![Feedback / Comments](https://drive.google.com/uc?id=1B82PuiOcBLCY8XcZFA5rCQdIe5WzwkUe)
+
+### Player
+![Player](https://drive.google.com/uc?id=1QkrcnfFJKT2gYAJ_M5R4EPfeQsRSt5Kb)
+
+### Make Comments
+![Make Comments](https://drive.google.com/uc?id=1Y48fIKbrOrm0EDl3iRXkhB9XyMtI-Ntj)
+
+### Favorite Anime
+![Favorite Anime](https://drive.google.com/uc?id=1Pktiy8k22W7Ntpwj_aQI4Ua17UGAFRhG)
+
 
 
 ## 🛠️ How to Install and Run the Project
@@ -67,7 +90,7 @@ Provide instructions and examples so users/contributors can use the project. Inc
 
 ## 🏅 Badges
 
-[![GitHub stars](https://img.shields.io/github/stars/your-username/your-repo.svg)](https://github.com/your-username/your-repo/stargazers)
+[![GitHub stars](https://img.shields.io/github/stars/your-username/your-repo.svg)](https://github.com/Karanbagal1234/anime-streming-website/stargazers)
 [![GitHub forks](https://img.shields.io/github/forks/your-username/your-repo.svg)](https://github.com/your-username/your-repo/network)
 [![GitHub issues](https://img.shields.io/github/issues/your-username/your-repo.svg)](https://github.com/your-username/your-repo/issues)
 
