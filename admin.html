@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html>
+  <link
+    rel="stylesheet"
+    href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+  />
+
+  <!-- Add Font Awesome CSS (Replace the version number with the one you want to use) -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+  />
+  <style>
+    body {
+      background: url("https://drive.google.com/uc?export=view&id=1zdVFCyVnLk8XElVjjwkRPDvs0wWynt_t")
+        no-repeat center center fixed;
+      background-size: cover;
+      color: #fff;
+    }
+
+    .container {
+      background: rgba(255, 255, 255, 0.2);
+      border-radius: 10px;
+      backdrop-filter: blur(10px);
+      box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+      padding: 20px;
+      margin-top: 20px;
+      transition: all 0.3s ease-in-out;
+    }
+
+    h2 {
+      color: #007bff;
+    }
+
+    label {
+      font-weight: bold;
+    }
+
+    button {
+      margin-top: 10px;
+    }
+  </style>
+  <body>
+    <!-- Add Anime Form -->
+    <div class="container mt-4">
+        <h2>Add Anime</h2>
+        <form id="addAnimeForm" class="needs-validation" novalidate>
+          <div class="row">
+            <div class="col-md-6">
+              <label for="animeName">Anime Name:</label>
+              <input type="text" id="animeName" name="animeName" class="form-control" required />
+            </div>
+            <div class="col-md-6">
+                <label for="status">Status:</label>
+                <input type="text" id="status" name="status" class="form-control" required />
+              </div>
+          </div>
+    <div class="row">
+        <div class="col-md-12">
+            <label for="desc">Description:</label>
+            <textarea id="desc" name="desc" rows="4" class="form-control" required></textarea>
+        </div>
+    </div>
+          <div class="row">
+            <div class="col-md-6">
+              <label for="posterLink">Poster Link:</label>
+              <input type="text" id="posterLink" name="posterLink" class="form-control" required />
+            </div>
+            <!-- "Description" field occupies full row -->
+            <div class="col-md-6">
+              <label for="type">Type:</label>
+              <input type="text" id="type" name="type" class="form-control" required />
+            </div>
+          </div>
+    
+          <div class="row">
+            <div class="col-md-6">
+              <label for="studio">Studio:</label>
+              <input type="text" id="studio" name="studio" class="form-control" required />
+            </div>
+            <div class="col-md-6">
+              <label for="genre">Genre:</label>
+              <input type="text" id="genre" name="genre" class="form-control" required />
+            </div>
+          </div>
+    
+          <div class="row">
+            <div class="col-md-6">
+              <label for="scores">Scores:</label>
+              <input type="text" id="scores" name="scores" class="form-control" required />
+            </div>
+            <div class="col-md-6">
+              <label for="rating">Rating:</label>
+              <input type="text" id="rating" name="rating" class="form-control" required />
+            </div>
+          </div>
+    
+          <div class="row">
+            <div class="col-md-6">
+              <label for="duration">Duration:</label>
+              <input type="text" id="duration" name="duration" class="form-control" required />
+            </div>
+            <div class="col-md-6">
+              <label for="quality">Quality:</label>
+              <input type="text" id="quality" name="quality" class="form-control" required />
+            </div>
+          </div>
+    
+          <button type="submit" class="btn btn-primary mt-3">Add Anime</button>
+        </form>
+      </div>
+    
+
+    <!-- Update Anime Form -->
+    <div class="container mt-4">
+        <h2>Update Anime</h2>
+        <form id="updateAnimeForm" class="needs-validation" novalidate>
+          <div class="row mb-3">
+            <label for="selectAnime" class="col-md-2 col-form-label">Select Anime:</label>
+            <div class="col-md-6">
+              <select id="selectAnime" name="selectAnime" class="form-select" required></select>
+            </div>
+          </div>
+    
+          <h3>Modify Anime Episodes</h3>
+          <!-- Options for updating anime -->
+          <div class="row mb-3">
+            <div class="col-md-6">
+              <label for="modifyEpNo" class="form-label">Episode Number to Modify:</label>
+              <input type="number" id="modifyEpNo" name="modifyEpNo" class="form-control" required />
+            </div>
+    
+            <div class="col-md-6">
+              <label for="modifyEpTitle" class="form-label">New Episode Title:</label>
+              <input type="text" id="modifyEpTitle" name="modifyEpTitle" class="form-control" required />
+            </div>
+    
+            <div class="col-md-6">
+              <label for="modifyEpSrc" class="form-label">New Episode Source:</label>
+              <input type="text" id="modifyEpSrc" name="modifyEpSrc" class="form-control" required />
+            </div>
+    
+            <div class="col-md-12">
+              <button type="submit" class="btn btn-primary">Modify Episodes</button>
+            </div>
+          </div>
+    
+          <div class="row mb-3">
+            <div class="col-md-6">
+              <h3>Add Anime Episode</h3>
+              <label for="addEpNo" class="form-label">Episode Number:</label>
+              <input type="number" id="addEpNo" name="addEpNo" class="form-control" required />
+            </div>
+    
+            <div class="col-md-6">
+              <label for="addEpTitle" class="form-label">Episode Title:</label>
+              <input type="text" id="addEpTitle" name="addEpTitle" class="form-control" required />
+            </div>
+    
+            <div class="col-md-6">
+              <label for="addEpSrc" class="form-label">Episode Source:</label>
+              <input type="text" id="addEpSrc" name="addEpSrc" class="form-control" required />
+            </div>
+    
+            <div class="col-md-12">
+              <button type="submit" class="btn btn-primary">Add Episode</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <!-- Include this script in your HTML file -->
+    <script>
+      const addAnimeForm = document.getElementById("addAnimeForm");
+      const updateAnimeForm = document.getElementById("updateAnimeForm");
+      const apiUrl = 'https://script.google.com/macros/s/AKfycbwq3H4RkEahfnq3m9RTWnNzs9JheGyDdpNGsMG6hK3OiNfSk05Bv-LiuUar_s5-JNRN/exec';
+
+const postData = {
+  action: 'addAnime',
+  animeName: 'Dummy Anime',
+  desc: 'A dummy anime description.',
+  posterLink: 'https://example.com/dummy-poster.jpg',
+  type: 'TV',
+  studio: 'Dummy Studio',
+  genre: 'Action, Comedy',
+  scores: '8.5',
+  rating: 'PG-13',
+  duration: '24 min',
+  quality: 'HD',
+  status: 'Ongoing'
+};
+
+fetch(apiUrl, {
+  method: 'POST',
+  headers: {
+    'Content-Type': 'application/json',
+  },
+  body: JSON.stringify(postData),
+})
+  .then(response => response.json())
+  .then(data => console.log(data))
+  .catch(error => console.error('Error:', error));
+
+    </script>
+  </body>
+</html>

@@ -1,0 +1,100 @@
+:root{
+	--primary: linear-gradient(to bottom right , #0a0057,#3f00ee);
+	--secondary : gold ;
+	--text:#fff;
+}
+.main-content{
+	display: grid;
+	grid-template-columns: 1.8fr 1.2fr;
+	gap: 1rem;
+	padding: .5rem 1rem;
+	text-transform: capitalize;
+	margin-top: 107px;
+}
+.main-video video{
+	width: 100%;
+	 /* 716px; */
+	border-radius: .5rem;
+
+}
+.video img{
+width: 1.5rem;
+height: 1.5rem;
+background-color: beige;
+}
+
+@media screen and (max-width:990px) {
+	.main-content{
+		grid-template-columns: 1fr ;
+	}
+}
+.main-video, .video-playlist{
+	width: 100%;
+	height: 30rem;
+
+}
+.main-video .title{
+	margin-top: 1rem;
+}
+.video-playlist .title{
+	padding-left: 1rem;
+}
+
+.video-playlist p{
+	padding: 1rem;
+	color: var(--secondary);
+}
+.video-playlist .vid .videos{
+	height: 65.6px;
+	overflow-y: auto;
+}
+.video-playlist .vid .videos .video .title{
+	font-size: 15px;
+}
+.video-playlist .vid .videos .video{
+	width: 100%;
+	height: 4rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 0 1rem;
+	margin-top: .1rem;
+	cursor: pointer;
+	border-radius: .5rem;
+
+}
+.video-playlist .vid .videos .video:hover{
+	background-color: #000;
+}
+.video-playlist .vid .videos .video.active{
+	background-color: #000;
+	color: var(--secondary) ;
+
+}
+.video-playlist::-webkit-scrollbar-track {
+	background-color: transparent;
+  }
+.video .title{
+	font-size: 15px;
+	width: 265px;
+}
+#main-content > section.video-playlist > h3,#main-content > section.main-video > h3{
+	color: #fff;
+}
+div > div > h3{
+	width: 240px;
+}
+/* .video-playlist .videos::-webkit-scrollbar-track{
+
+} */
+
+/* Add this CSS to your existing styles or create a new section for it */
+
+.video-playlist .vid {
+	overflow-y: auto;
+	height: 350px;
+  }
+  
+  
+
+  

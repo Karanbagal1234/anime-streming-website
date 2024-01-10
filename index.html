@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>home</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+  </head>
+  <body>
+    
+    <header>
+      <button class="fa-solid fa-bars" onclick="ham()"></button>
+
+      <img src="img/logo.png" alt="" class="logo" />
+      <div class="sec">
+        <div class="search" style="position: relative">
+          <input type="text" placeholder="Search.." name="search" />
+          <button id="input-btn"><i class="fa fa-search"></i></button>
+        </div>
+        <button
+          class="fa-solid fa-heart " id="wishlist"
+          style=" color:#ffA500;"
+          onclick="toggleWishlist()"
+        ></button>
+      </div>
+    </header>
+    <main class="app">
+      
+
+          <div class="side">
+            <div class="box">
+            </div>
+            <div class="box">
+            </div>
+            <div class="box clicked">
+                <div class="support"></div>
+                <div class="icon" onclick="handleIconClick(this)"><i class="fas fa-home"></i></div>
+            </div>
+            
+            <div class="box">
+                <div class="support"></div>
+                <div class="icon" onclick="handleIconClick(this)"><i class="fas fa-fire"></i></div>
+            </div>
+            <div class="box">
+                <div class="support"></div>
+                <div class="icon" onclick="handleIconClick(this)"><i class="fas fa-list-ul"></i></div>
+            </div>
+            <div class="box">
+            </div>
+            <div class="box">
+            </div> <div class="box">
+            </div> <div class="box">
+            </div> <div class="box">
+            </div> <div class="box">
+            </div> <div class="box">
+            </div> <div class="box">
+            </div> <div class="box">
+            </div> <div class="box">
+            </div> <div class="box"  style="border-radius: 0 0 11px  0;">
+            </div>
+          </div>
+
+          <div class="main-content" id="main-content">
+  <div class="section" id="hero">
+        <span onclick="prev_banner()" id="prev" class="prevArrow"><i class="fa-solid fa-chevron-up"></i></span>
+        <div class="poster">
+          <img src="https://wallpapercave.com/wp/wp8326456.jpg" class="banner" id="banner"alt="banner">
+          <div class="information" id="information">
+            <h2 id="head">ANIME NAME KNS KSFNKSFNKDN DFNKDNF DFNNKLSN</h2>
+            <p style="text-transform: capitalize; color: #ffffff;
+            font-size: 16px; ">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Modi, possimus?.....</p>
+            <button>
+              P L A Y
+              <div id="clip">
+                  <div id="leftTop" class="corner"></div>
+                  <div id="rightBottom" class="corner"></div>
+                  <div id="rightTop" class="corner"></div>
+                  <div id="leftBottom" class="corner"></div>
+              </div>
+              <span id="rightArrow" class="arrow"></span>
+              <span id="leftArrow" class="arrow"></span>
+          </button>
+          </div>
+        </div>
+          <span onclick="next_banner()" id="next"class="nextArrow"><i class="fa-solid fa-chevron-up"></i></span>
+  </div>
+  <div class="section" id="section2">
+    <div class="content-box">
+
+
+      <div class="options">
+        <div class="left disfl">
+          <span class="line"></span>
+          <p>Trending Anime</p>
+        </div>
+        <div class="right disfl">
+          <p>view</p>
+          <i class="content-icon fa-xs fa-solid fa-chevron-up"></i>
+        </div>
+      </div>
+      <div class="slides">
+        <div class="slide-item trending-anime" >
+          <img src="" alt="">
+          <div class="img-icons">          
+          
+          <i class="fa-regular fa-heart fa-xs"  onclick="favorite(this)" style=" color:#ffA500; margin-right: 20px" ></i>
+             <i class="fa-solid fa-circle-info fa-xs" onclick="info(this)"></i>
+        </div>
+        
+        <div class="watch" onclick="watchthis(this)">
+          <i class="fa-solid fa-play fa-xs"></i>
+          <span style="font-size: x-small; ">Watch Now</span>
+         </div>
+    
+        </div>
+        <div class="slide-item trending-anime"><img src="" alt=""> <div class="img-icons">          
+          
+          <i class="fa-regular fa-heart fa-xs"  onclick="favorite(this)" style=" color:#ffA500; margin-right: 20px" ></i>
+             <i class="fa-solid fa-circle-info fa-xs" onclick="info(this)"></i>
+        </div>
+        
+        <div class="watch" onclick="watchthis(this)">
+          <i class="fa-solid fa-play fa-xs"></i>
+          <span style="font-size: x-small; ">Watch Now</span>
+         </div>
+    </div>
+        <div class="slide-item trending-anime"><img src="" alt=""> <div class="img-icons">          
+          
+          <i class="fa-regular fa-heart fa-xs"  onclick="favorite(this)" style=" color:#ffA500; margin-right: 20px" ></i>
+             <i class="fa-solid fa-circle-info fa-xs" onclick="info(this)"></i>
+        </div>
+        
+        <div class="watch" onclick="watchthis(this)">
+          <i class="fa-solid fa-play fa-xs"></i>
+          <span style="font-size: x-small; ">Watch Now</span>
+         </div>
+    </div>
+        <div class="slide-item trending-anime"><img src="" alt=""> <div class="img-icons">          
+          
+          <i class="fa-regular fa-heart fa-xs"  onclick="favorite(this)" style=" color:#ffA500; margin-right: 20px" ></i>
+             <i class="fa-solid fa-circle-info fa-xs" onclick="info(this)"></i>
+        </div>
+        
+        <div class="watch" onclick="watchthis(this)">
+          <i class="fa-solid fa-play fa-xs"></i>
+          <span style="font-size: x-small; ">Watch Now</span>
+         </div>
+    </div>
+        <div class="slide-item trending-anime"><img src="" alt=""> <div class="img-icons">          
+          
+          <i class="fa-regular fa-heart fa-xs"  onclick="favorite(this)" style=" color:#ffA500; margin-right: 20px" ></i>
+             <i class="fa-solid fa-circle-info fa-xs" onclick="info(this)"></i>
+        </div>
+        
+        <div class="watch" onclick="watchthis(this)">
+          <i class="fa-solid fa-play fa-xs"></i>
+          <span style="font-size: x-small; ">Watch Now</span>
+         </div>
+    </div>
+
+      </div>
+
+      <div class="options">
+        <div class="left disfl">
+          <span class="line"></span>
+          <p>Recent Anime</p>
+        </div>
+        <div class="right disfl">
+          <p>view</p>
+          <i class="content-icon fa-xs fa-solid fa-chevron-up"></i>
+        </div>
+      </div>
+      <div class="slides">
+        <div class="slide-item recent-anime"><img src="" alt=""> <div class="img-icons">          
+          
+          <i class="fa-regular fa-heart fa-xs"  onclick="favorite(this)" style=" color:#ffA500; margin-right: 20px" ></i>
+             <i class="fa-solid fa-circle-info fa-xs" onclick="info(this)"></i>
+        </div>
+        
+        <div class="watch" onclick="watchthis(this)">
+          <i class="fa-solid fa-play fa-xs"></i>
+          <span style="font-size: x-small; ">Watch Now</span>
+         </div>
+    </div>
+        <div class="slide-item recent-anime"><img src="" alt=""> <div class="img-icons">          
+          
+          <i class="fa-regular fa-heart fa-xs"  onclick="favorite(this)" style=" color:#ffA500; margin-right: 20px" ></i>
+             <i class="fa-solid fa-circle-info fa-xs" onclick="info(this)"></i>
+        </div>
+        
+        <div class="watch" onclick="watchthis(this)">
+          <i class="fa-solid fa-play fa-xs"></i>
+          <span style="font-size: x-small; ">Watch Now</span>
+         </div>
+    </div>
+        <div class="slide-item recent-anime"><img src="" alt=""> <div class="img-icons">          
+          
+          <i class="fa-regular fa-heart fa-xs"  onclick="favorite(this)" style=" color:#ffA500; margin-right: 20px" ></i>
+             <i class="fa-solid fa-circle-info fa-xs" onclick="info(this)"></i>
+        </div>
+        
+        <div class="watch" onclick="watchthis(this)">
+          <i class="fa-solid fa-play fa-xs"></i>
+          <span style="font-size: x-small; ">Watch Now</span>
+         </div>
+    </div>
+        <div class="slide-item recent-anime"><img src="" alt=""> <div class="img-icons">          
+          
+          <i class="fa-regular fa-heart fa-xs"  onclick="favorite(this)" style=" color:#ffA500; margin-right: 20px" ></i>
+             <i class="fa-solid fa-circle-info fa-xs" onclick="info(this)"></i>
+        </div>
+        
+        <div class="watch" onclick="watchthis(this)">
+          <i class="fa-solid fa-play fa-xs"></i>
+          <span style="font-size: x-small; ">Watch Now</span>
+         </div>
+    </div>
+        <div class="slide-item recent-anime"><img src="" alt=""> <div class="img-icons">          
+          
+          <i class="fa-regular fa-heart fa-xs"  onclick="favorite(this)" style=" color:#ffA500; margin-right: 20px" ></i>
+             <i class="fa-solid fa-circle-info fa-xs" onclick="info(this)"></i>
+        </div>
+        
+        <div class="watch" onclick="watchthis(this)">
+          <i class="fa-solid fa-play fa-xs"></i>
+          <span style="font-size: x-small; ">Watch Now</span>
+         </div>
+    </div>
+
+      </div>
+
+      <div class="options">
+        <div class="left disfl">
+          <span class="line"></span>
+          <p>Popular Anime</p>
+        </div>
+        <div class="right disfl">
+          <p>view</p>
+          <i class="content-icon fa-xs fa-solid fa-chevron-up"></i>
+        </div>
+      </div>
+      <div class="slides">
+        <div class="slide-item popular-anime"><img src="" alt="">
+          <div class="img-icons">          
+          
+          <i class="fa-regular fa-heart fa-xs"  onclick="favorite(this)" style=" color:#ffA500; margin-right: 20px" ></i>
+         <i class="fa-solid fa-circle-info fa-xs" onclick="info(this)"></i>
+        </div>
+        
+        <div class="watch" onclick="watchthis(this)">
+          <i class="fa-solid fa-play fa-xs"></i>
+          <span style="font-size: x-small; ">Watch Now</span>
+         </div></div>
+        <div class="slide-item popular-anime"><img src="" alt=""><div class="img-icons">          
+          
+          <i class="fa-regular fa-heart fa-xs"  onclick="favorite(this)" style=" color:#ffA500; margin-right: 20px" ></i>
+             <i class="fa-solid fa-circle-info fa-xs" onclick="info(this)"></i>
+        </div>
+        
+        <div class="watch" onclick="watchthis(this)">
+          <i class="fa-solid fa-play fa-xs"></i>
+          <span style="font-size: x-small; ">Watch Now</span>
+         </div></div>
+        <div class="slide-item popular-anime"><img src="" alt=""><div class="img-icons">          
+          
+          <i class="fa-regular fa-heart fa-xs"  onclick="favorite(this)" style=" color:#ffA500; margin-right: 20px" ></i>
+             <i class="fa-solid fa-circle-info fa-xs" onclick="info(this)"></i>
+        </div>
+        
+        <div class="watch" onclick="watchthis(this)">
+          <i class="fa-solid fa-play fa-xs"></i>
+          <span style="font-size: x-small; ">Watch Now</span>
+         </div></div>
+        <div class="slide-item popular-anime"><img src="" alt=""><div class="img-icons">          
+          
+          <i class="fa-regular fa-heart fa-xs"  onclick="favorite(this)" style=" color:#ffA500; margin-right: 20px" ></i>
+          <i class="fa-solid fa-circle-info fa-xs" onclick="info(this)"></i>
+        </div>
+        
+        <div class="watch" onclick="watchthis(this)">
+          <i class="fa-solid fa-play fa-xs"></i>
+          <span style="font-size: x-small; ">Watch Now</span>
+         </div></div>
+        <div class="slide-item popular-anime"><img src="" alt=""><div class="img-icons">          
+          
+          <i class="fa-regular fa-heart fa-xs"  onclick="favorite(this)" style=" color:#ffA500; margin-right: 20px" ></i>
+          <i class="fa-solid fa-circle-info fa-xs"  onclick="info(this)"></i>
+        </div>
+        
+        <div class="watch" onclick="watchthis(this)">
+          <i class="fa-solid fa-play fa-xs"></i>
+          <span style="font-size: x-small; ">Watch Now</span>
+         </div></div>
+
+      </div>
+
+
+
+
+    </div>
+   
+  </div>
+      </main>
+      
+  <footer>
+    <div class="footer-text">
+      <img src="img/logo.png" alt="Logo" class="footer-logo">
+      <p> Anime Streaming &copy; 2023. All rights reserved. </p>
+    </div>
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+
+  <script src="javascripts/script.js"></script>
+
+    </body>
+</html>
