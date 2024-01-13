@@ -89,12 +89,36 @@ div > div > h3{
 } */
 
 /* Add this CSS to your existing styles or create a new section for it */
-
 .video-playlist .vid {
-	overflow-y: auto;
-	height: 350px;
-  }
-  
-  
+    overflow-y: scroll;
+    height: 318px;
+    border-radius: 0px 0px 0.5rem 0.5rem;
+}
 
-  
+.video-playlist .vid::-webkit-scrollbar {
+    width: 10px;
+}
+
+.video-playlist .vid::-webkit-scrollbar-track {
+    background-color: #F5F5F5;
+}
+
+.video-playlist .vid::-webkit-scrollbar-thumb {
+    background: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet);
+    border-radius: 5px;
+    animation: rainbowScroll 3s linear infinite;
+}
+
+.video-playlist .vid::-webkit-scrollbar-thumb:hover {
+    background-color: #555555;
+    animation: none; /* Disable animation on hover */
+}
+
+@keyframes rainbowScroll {
+    0% {
+        background-position: 0% 50%;
+    }
+    100% {
+        background-position: 100% 50%;
+    }
+}
