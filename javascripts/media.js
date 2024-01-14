@@ -67,6 +67,7 @@ function handleIconClick(clickedIcon) {
         nextElement.classList.add('boxnext');
     }
 }
+let main_video = document.querySelector("#video > source");
 let plaingvideotitle = document.querySelector("#main-content > section.main-video > h3");
 function updateVideoChat(params) {
     let src = params.querySelector("div").classList;
@@ -93,7 +94,7 @@ fetch(apiUrl)
             {
                 name: "Demon Slayer",
                 episodes: [
-                    { title: "Episode 1", src: "https://www.youtube.com/embed/_vnWp4XM8QU" },
+                    { title: "Episode 1", src: "./4_5845751614308093258.mp4" },
                     { title: "Episode 1", src: "https://www.youtube.com/embed/_vnWp4XM8QU" },
                     { title: "Episode 2", src: "https://www.youtube.com/embed/_vnWp4XM8QU" },
                     { title: "Episode 2", src: "https://www.youtube.com/embed/_vnWp4XM8QU" },
@@ -133,6 +134,4 @@ fetch(apiUrl)
 
         play();
     })
-    .catch(error => {
-        console.error('Fetch error:', error);
-    });
+ 

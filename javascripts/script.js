@@ -60,18 +60,25 @@ initializePage();
 wishlistAnime = document.getElementById("main-content");
     let wishChecked = true;
     let arr = [];
+    if (localStorage.getItem("arr")) {
+      arr = JSON.parse(localStorage.getItem("arr"));
+    }
+    
     const wishList = document.getElementById("wishlist");
     
-    function generateCardTemplate(anime) {
+    function generateCardTemplate(animes) {
+      for (const anime of animesd.anime) {
+        if(anime.animeName === animes){
+          console.log(anime);
       return `
         <article class="postcard dark yellow">
           <a class="postcard__img_link" href="#">
-            <img class="postcard__img" src="${anime[1]}" alt="Image Title" />
+            <img class="postcard__img" src="${anime.posterLink}" alt="Image Title" />
           </a>
           <div class="postcard__text">
-            <h1 class="postcard__title yellow"><a href="#">${anime[0]}</a></h1>
+            <h1 class="postcard__title yellow"><a href="#">${anime.animeName}</a></h1>
             <div class="postcard__bar"></div>
-            <div class="postcard__preview-txt">${anime[2]}</div>
+            <div class="postcard__preview-txt">${anime.desc}</div>
             <ul class="postcard__tagbox">
               <li class="tag__item play yellow">
                 <a href="#"><i class="fas fa-play mr-2"></i>Play Episode</a>
@@ -81,7 +88,8 @@ wishlistAnime = document.getElementById("main-content");
         </article>
       `;
     }
-    
+  }
+}
     
     function toggleWishlist() {
       if (wishChecked) {
@@ -97,9 +105,7 @@ wishlistAnime = document.getElementById("main-content");
     
     function favorite(anime) {
       anime.classList.replace("fa-regular", "fa-solid");
-      const parentDiv = anime.parentNode;
-      const prevImg = parentDiv.previousElementSibling;
-    
+      const prevImg = anime.parentNode.previousElementSibling;
       // Check if prevImg has valid classes for indexing
       const classListArray = Array.from(prevImg.classList);
       if (classListArray.length === 0) {
@@ -110,7 +116,6 @@ wishlistAnime = document.getElementById("main-content");
       // Use the last class as an example, you may adjust it based on your actual class naming
       const lastClass = classListArray[classListArray.length - 1];
       const index = parseInt(lastClass, 10);
-    
       // Check if index is a valid number
       if (isNaN(index) || index < 0 || index >= animesd.anime.length) {
         console.error('Invalid index:', index);
@@ -118,19 +123,21 @@ wishlistAnime = document.getElementById("main-content");
       }
     
       const favName = animesd.anime[index].animeName;
-      const favPoster = animesd.anime[index].posterLink;
-      const favDesc = animesd.anime[index].desc;
-      const favwatchlink = animesd.anime + ' ' + index;
-      const favAnime = [favName, favPoster, favDesc, favwatchlink];
     
       const indexToRemove = arr.findIndex(item => item[0] === favName);
     
       if (indexToRemove === -1) {
-        arr.push(favAnime);
+        arr.push(favName);
+       
       } else {
         arr.splice(indexToRemove, 1);
       }
-    
+      if (localStorage.getItem("arr")) {
+        localStorage.setItem("arr", JSON.stringify(arr));
+      } else {
+        localStorage.setItem("arr", JSON.stringify(arr));
+      }
+      
       console.log('Updated arr:', arr);
     }
     
@@ -174,10 +181,6 @@ wishlistAnime = document.getElementById("main-content");
          input.style.visibility = "visible";
          input.style.animationName = "slide-start";
        }
-      //  let search = document.querySelector("body > header > div > div > input[type=text]");
-      //  search.style.display = search.style.display === "none" ? "block" : "none";
-      //  let favicon = document.querySelector(".fa-heart");
-      //  favicon.style.display = favicon.style.display === "block" ? "none" : "block";
      });
      
      
@@ -237,10 +240,3 @@ wishlistAnime = document.getElementById("main-content");
       sidenav.style.display = sidenav.style.display === "none" ? "block" : "none";
     }
     
-     const flexItem = document.querySelector('.slides');
-
-  // Get the computed style
-  const computedStyle = window.getComputedStyle(flexItem);
-
-  // Log the flex property
-  console.log('Flex Property:', computedStyle.flex);
