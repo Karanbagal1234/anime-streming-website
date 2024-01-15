@@ -90,7 +90,14 @@ wishlistAnime = document.getElementById("main-content");
     }
   }
 }
-    
+    function playthis(thi){
+      let animen = thi.parentElement.querySelector("h2").textContent;
+      if (animen) {
+  
+        const newURL = window.location.href.replace("index.html", `m.html?id=${animen}`);
+        window.location.href = newURL;
+      }
+    }
     function toggleWishlist() {
       if (wishChecked) {
         wishlistAnime.innerHTML = arr.map(generateCardTemplate).join('');
