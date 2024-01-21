@@ -1,6 +1,6 @@
 const urlParams = new URLSearchParams(window.location.search);
 const idValue = urlParams.get('id');
-const animeName = idValue ? idValue.replaceAll("-", " ") : undefined;
+const animeName = idValue ? idValue.replaceAll("-", " ").toLowerCase() : undefined;
 
 let titleElement = document.querySelector("#main-content > section.video-playlist > h3");
 titleElement.textContent = animeName;

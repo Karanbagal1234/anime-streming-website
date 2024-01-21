@@ -104,7 +104,7 @@ div > div > h3{
 }
 
 .video-playlist .vid::-webkit-scrollbar-thumb {
-    background: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet);
+    background: linear-gradient(to right, #4CAF50, #FFC107, #03A9F4, #FF5722, #9C27B0, #2196F3, #E91E63);
     border-radius: 5px;
     animation: rainbowScroll 3s linear infinite;
 }

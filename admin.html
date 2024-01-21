@@ -12,10 +12,9 @@
   />
   <style>
     body {
-      background: url("https://plus.unsplash.com/premium_photo-1672154366127-f8d51314611f?q=80&w=627&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D%20627w")
+      background: url("./4_5868254038893530883.mp4")
         no-repeat center center fixed;
       background-size: cover;
-      color: #fff;
     }
 
     .container {
@@ -39,8 +38,16 @@
     button {
       margin-top: 10px;
     }
+
+    video{
+      height: 100vh;
+      width: 100%;
+      z-index: -12;
+    }
   </style>
   <body>
+
+   
     <!-- Add Anime Form -->
     <div class="container mt-4">
         <h2>Add Anime</h2>
@@ -172,38 +179,54 @@
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-    <!-- Include this script in your HTML file -->
-    <script>
-      const addAnimeForm = document.getElementById("addAnimeForm");
-      const updateAnimeForm = document.getElementById("updateAnimeForm");
-      const apiUrl = 'https://script.google.com/macros/s/AKfycbwq3H4RkEahfnq3m9RTWnNzs9JheGyDdpNGsMG6hK3OiNfSk05Bv-LiuUar_s5-JNRN/exec';
-
-const postData = {
-  action: 'addAnime',
-  animeName: 'Dummy Anime',
-  desc: 'A dummy anime description.',
-  posterLink: 'https://example.com/dummy-poster.jpg',
-  type: 'TV',
-  studio: 'Dummy Studio',
-  genre: 'Action, Comedy',
-  scores: '8.5',
-  rating: 'PG-13',
-  duration: '24 min',
-  quality: 'HD',
-  status: 'Ongoing'
+  <script>
+function detail(){
+    const action = 'addAnime';
+    const animeName = document.getElementById("animeName").value;
+    const desc = document.getElementById("desc").value;
+    const posterLink = document.getElementById("posterLink").value;
+    const type = document.getElementById("type").value;
+    const studio= document.getElementById("studio").value;
+    const genre = document.getElementById("genre").value;
+    const scores = document.getElementById("scores").value;
+    const rating = document.getElementById("rating").value;
+    const duration = document.getElementById("duration").value;
+    const quality = document.getElementById("quality").value;
+    const status = document.getElementById("status").value;
+    
+const data = {
+    action: action,
+    animeName: animeName,
+    desc: desc,
+    posterLink: posterLink,
+    type: type,
+    studio: studio,
+    genre: genre,
+    scores: scores,
+    rating: rating,
+    duration: duration,
+    quality: quality,
+    status: status
 };
-
-fetch(apiUrl, {
-  method: 'POST',
-  headers: {
-    'Content-Type': 'application/json',
-  },
-  body: JSON.stringify(postData),
+console.log(data)
+fetch('https://script.google.com/macros/s/AKfycbwq3H4RkEahfnq3m9RTWnNzs9JheGyDdpNGsMG6hK3OiNfSk05Bv-LiuUar_s5-JNRN/exec', {
+    method: 'POST',
+    headers: {
+        'Content-Type': 'application/json',
+    },
+    mode: 'no-cors',
+    body: JSON.stringify(data),
 })
-  .then(response => response.json())
-  .then(data => console.log(data))
-  .catch(error => console.error('Error:', error));
-
-    </script>
+.then(response => response.json())
+.then(result => {
+    console.log(result);
+    // Handle the response as neede
+})
+.catch(error => {
+    console.error('Errorr:', error);
+    // Handle errors
+});
+}
+  </script>
   </body>
 </html>
