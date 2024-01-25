@@ -34,7 +34,7 @@ function updateAnimeDetails(anime) {
     updateElement(selectors.score, `<span>Scores:</span> ${anime.scores}`);
     updateElement(selectors.rating, `<span>Rating:</span> ${anime.rating}`);
     updateElement(selectors.duration, `<span>Duration:</span> ${anime.duration}`);
-    updateElement(selectors.status, `<span>Status:</span> ${anime.status}`);
+    // updateElement(selectors.status, `<span>Status:</span> ${anime.status}`);
     updateElement(selectors.title, anime.animeName);
     updateElement(selectors.img, anime.posterLink);
     updateElement(selectors.description, anime.desc);
