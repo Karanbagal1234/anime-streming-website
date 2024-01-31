@@ -20,7 +20,7 @@ User accounts and enhanced security features are planned for future iterations o
 ## 💻 Technology Stack
 
 - **Frontend:** HTML, CSS, JavaScript
-- **Backend:** Google Sheets and Google Apps Script for data storage and retrieval.
+- **Backend:** Firebase Firestore for data storage and retrieval.
 
 ## 🌐 Community and Interaction
 
@@ -35,7 +35,6 @@ The website is designed to be mobile-responsive, ensuring a seamless user experi
 Future updates may include:
 - User accounts for personalized experiences.
 - Improved security measures.
-- Addition of themes and color schemes.
 - Community engagement features like forums or social sharing.
 
 ## 📢 Feedback
@@ -84,32 +83,10 @@ Follow these steps to set up the development environment:
 2. Navigate to the project directory: `cd anime-website`
 3. Open `index.html` in your preferred browser.
 
-## 🚦 How to Use the Project
 
-Provide instructions and examples so users/contributors can use the project. Include screenshots for a better understanding.
-
-## 🏅 Badges
-
-[![GitHub stars](https://img.shields.io/github/stars/your-username/your-repo.svg)](https://github.com/Karanbagal1234/anime-streming-website/stargazers)
-[![GitHub forks](https://img.shields.io/github/forks/your-username/your-repo.svg)](https://github.com/your-username/your-repo/network)
-[![GitHub issues](https://img.shields.io/github/issues/your-username/your-repo.svg)](https://github.com/your-username/your-repo/issues)
-
-## 🤝 How to Contribute to the Project
-
-Please read [CONTRIBUTING.md](link_to_contributing_file) for details on the code of conduct, and the process for submitting pull requests to us.
-
-## 🧪 Tests
-
-Go the extra mile and write tests for your application. Provide code examples and how to run them.
-
-## 📄 License
-
-This project is licensed under the [MIT License](LICENSE.md) - see the [LICENSE.md](LICENSE.md) file for details.
 
 ## 📝 Credits
 
 - Tutorials and References: [Tutorial Name](link_to_tutorial), [Reference Material](link_to_reference)
-
-
 
 ---
