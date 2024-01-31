@@ -69,11 +69,3 @@ Follow these steps to set up the development environment:
 1. Clone the repository: `git clone https://github.com/Karanbagal1234/anime-streming-website.git`
 2. Navigate to the project directory: `cd anime-website`
 3. Open `index.html` in your preferred browser.
-
-
-
-## 📝 Credits
-
-- Tutorials and References: [Tutorial Name](link_to_tutorial), [Reference Material](link_to_reference)
-
----
