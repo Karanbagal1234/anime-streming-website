@@ -78,6 +78,7 @@ align-items: center;
 justify-content: center;
 gap: 9px;
 border-radius: 20px;
+align-self: flex-start;
 }
 
 .watch i {

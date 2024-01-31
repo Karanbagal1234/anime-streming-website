@@ -1,6 +1,5 @@
   @import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,300,600');
   @import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@1,500&family=Montserrat:ital,wght@1,200&family=Oswald:wght@700&family=Roboto+Slab:wght@300&display=swap');
-
   :root {
     --primary-background-color: #0b0c2a;
     --primary-text-color: #ededed;
@@ -26,7 +25,8 @@
     --clip-color: #2761c3;
     --arrow-background: #2761c3;
   }
-  
+
+
 
 html,
 body {
@@ -325,7 +325,7 @@ header,
 }
 .banner {
   height: 655px;
-  width: 1203px;
+  width: 1212px;
   filter: brightness(0.4);
 }
 .information {

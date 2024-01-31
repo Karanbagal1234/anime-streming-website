@@ -1,6 +1,3 @@
-import { initializeApp } from 'https://www.gstatic.com/firebasejs/9.4.0/firebase-app.js';
-import { getDatabase, ref, push } from 'https://www.gstatic.com/firebasejs/9.4.0/firebase-database.js';
-
 const firebaseConfig = {
   apiKey: "AIzaSyDTIlEfmdUFh_JDsdYWqz2mytBd0XuiC_0",
   authDomain: "anime-3132c.firebaseapp.com",
@@ -9,40 +6,113 @@ const firebaseConfig = {
   storageBucket: "anime-3132c.appspot.com",
   messagingSenderId: "404036144175",
   appId: "1:404036144175:web:16081724d50717c0dc0ada",
-  measurementId: "G-WD1JR9T4C1"
+  measurementId: "G-WD1JR9T4C1",
 };
 
-const app = initializeApp(firebaseConfig);
-const database = getDatabase(app);
+firebase.initializeApp(firebaseConfig);
+const db = firebase.firestore();
+const addAnimeButton = document.querySelector("#addAnimeForm > button");
 
-function addAnime() {
-  var animeName = document.getElementById('animeName').value;
-  var status = document.getElementById('status').value;
-  var desc = document.getElementById('desc').value;
-  var posterLink = document.getElementById('posterLink').value;
-  var type = document.getElementById('type').value;
-  var studio = document.getElementById('studio').value;
-  var genre = document.getElementById('genre').value;
-  var scores = document.getElementById('scores').value;
-  var rating = document.getElementById('rating').value;
-  var duration = document.getElementById('duration').value;
-  var quality = document.getElementById('quality').value;
 
-  var animeRef = ref(database, 'anime');
+document.getElementById('detail').addEventListener('click', () => {
+   
+        const formData = new FormData(document.getElementById("addAnimeForm"));
+        const animeData = Object.fromEntries(formData.entries());
+        const docRef = db.collection("animes").doc(animeData.animeName);
 
-  push(animeRef, {
-    animeName: animeName,
-    status: status,
-    desc: desc,
-    posterLink: posterLink,
-    type: type,
-    studio: studio,
-    genre: genre,
-    scores: scores,
-    rating: rating,
-    duration: duration,
-    quality: quality
-  });
+        docRef.set(animeData);
+      
+});
 
-  return false;
+function updateSelectOptions(selectId, options) {
+  const selectElement = document.getElementById(selectId);
+  selectElement.innerHTML = options
+    .map((option) => `<option ${option.value}>${option.text}</option>`)
+    .join("");
 }
+
+async function fetchAndUpdateAnimeOptions() {
+  try {
+    const animeOptions = await db
+      .collection("animes")
+      .get()
+      .then((querySnapshot) =>
+        querySnapshot.docs.map((doc) => ({
+          value: doc.data().animeName,
+          text: doc.data().animeName,
+        }))
+      );
+
+    updateSelectOptions("selectAnime", animeOptions);
+    updateSelectOptions("selectAnime2", animeOptions);
+  } catch (error) {
+    console.error("Error fetching anime options:", error);
+  }
+}
+
+fetchAndUpdateAnimeOptions();
+
+function add() {
+  let name = document.querySelector("#selectAnime").value;
+  let no = document.querySelector("#addEpNo").value;
+  let title = document.querySelector("#addEpTitle").value;
+  let src = document.querySelector("#addEpSrc").value;
+
+  let animeData = {
+    title: title,
+    src: src,
+  };
+
+  const docRef = db.collection("animes").doc(name).collection(no).doc(no);
+
+  docRef.set(animeData);
+}
+
+function add2() {
+  let name = document.querySelector("#selectAnime2").value;
+  let no = document.querySelector("#modifyEpNo").value;
+  let title = document.querySelector("#modifyEpTitle").value;
+  let src = document.querySelector("#modifyEpSrc").value;
+
+  let animeData = {
+    title: title,
+    src: src,
+  };
+
+  const docRef = db.collection("animes").doc(name).collection(no).doc(no);
+
+  docRef.set(animeData);
+
+}
+let episodeData = [];
+function disp() {
+const name = document.querySelector("#selectAnime2").value;
+const no = document.querySelector("#modifyEpNo").value;
+const title = document.querySelector("#modifyEpTitle");
+const src = document.querySelector("#modifyEpSrc");
+
+
+db.collection("animes")
+.doc(name)
+.collection(no)
+.doc(no)
+.get()
+.then((doc) => {
+if (doc.exists) {
+  episodeData.push(doc.data());
+  title.value = episodeData[0].title;
+  src.value = episodeData[0].src;
+} else {
+  title.value = ""; // Clear fields if no document exists
+  src.value = "";
+  console.log("No such document!");
+}
+})
+.catch((error) => {
+console.error("Error fetching data:", error);
+});
+
+}
+
+
+document.querySelector("#modifyEpNo").addEventListener("input", disp);
