@@ -88,5 +88,18 @@ Follow these steps to set up the development environment:
 ## 📝 Credits
 
 - Tutorials and References: [Tutorial Name](link_to_tutorial), [Reference Material](link_to_reference)
+## 📸 Screenshots
+
+| Home Page Slide Banner | Admin Panel | Admin Panel 2 |
+|:-----------------------:|:------------:|:-------------:|
+| ![Slide](https://drive.google.com/uc?id=1_NOH6vRaUeNuXMoD2Xw_2RsyHIIFCkDA) | ![Admin Panel](https://drive.google.com/uc?id=1OXwbDr3xhIpMo8lHLvzHE5Urf542pcmp) | ![Admin Panel 2](https://drive.google.com/uc?id=19WTREsuMX-VS43lJmAaDCr41WTWjZK5e) |
+
+| Anime Detail Page | Feedback / Comments | Player |
+|:------------------:|:---------------------:|:------:|
+| ![Anime Detail](https://drive.google.com/uc?id=1w9ZE0B0d-3Ne3S5gxwmPAui7FC8zqJmL) | ![Feedback / Comments](https://drive.google.com/uc?id=1B82PuiOcBLCY8XcZFA5rCQdIe5WzwkUe) | ![Player](https://drive.google.com/uc?id=1QkrcnfFJKT2gYAJ_M5R4EPfeQsRSt5Kb) |
+
+| Make Comments | Favorite Anime |
+|:--------------:|:--------------:|
+| ![Make Comments](https://drive.google.com/uc?id=1Y48fIKbrOrm0EDl3iRXkhB9XyMtI-Ntj) | ![Favorite Anime](https://drive.google.com/uc?id=1Pktiy8k22W7Ntpwj_aQI4Ua17UGAFRhG) |
 
 ---
